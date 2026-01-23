@@ -1,0 +1,85 @@
+//Ejercicio 1
+import kotlin.random.Random
+fun main() {
+    val firstResult = Random.nextInt(6)
+    val secondResult = Random.nextInt(6)
+    if(firstResult==secondResult)
+    {
+        println("You win :)")
+    }
+    else
+    {
+        println("You lose :(")
+    }
+}
+
+//Ejercicio 2
+fun main() {
+    val button = "A"
+
+    println(
+        when(button)
+        {
+            "A"->"Yes"
+            "B" -> "No"
+            "X" -> "Menu"
+            "Y" -> "Nothing"
+            else -> "There is no such button"
+        }
+    )
+}
+
+//Loops
+//Ejercicio 1.1
+fun main() {
+    var pizzaSlices = 0
+    while(pizzaSlices<7)
+    {
+        pizzaSlices++;
+        println("There's only $pizzaSlices slice/s of pizza :(")
+    }
+    pizzaSlices++;
+    println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
+}
+
+//Ejercicio 1.2
+fun main() {
+    var pizzaSlices = 0
+    do 
+    {
+        pizzaSlices++;
+        println("There's only $pizzaSlices slice/s of pizza :(")
+    }while(pizzaSlices<7)
+    pizzaSlices++;
+    println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
+}
+
+//Ejercicio 2
+fun main() {
+    for(n in 1..100)
+    {
+        println(
+            when
+            {
+                n%15 == 0 -> "fizzbuzz"
+                n%3 == 0 -> "fizz"
+                n%5 == 0 -> "buzz"
+                else -> "$n"
+            }
+        )
+    }
+}
+
+//Ejercicio 3
+fun main() {
+    val words = listOf("dinosaur", "limousine", "magazine", "language")
+    for(word in words)
+    {
+        if(word.startsWith("l"))
+        {
+            println(word)
+        }
+    }
+}
+
+//Conclusión: En este capítulo aprendí a usar condicionales y loops, los cuales son muy utiles para filtrar o recorrer listas, también aprendí a usar rangos ya que su sintaxis es muy diferente a los lenguajes que conocía
