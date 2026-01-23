@@ -19,3 +19,5 @@ fun main() {
     val n = 2
     println("$n is spelt as '${number2word[n]}'")
 }
+
+//Conclusión: Aprendí a usar estructuras de datos que ya había aprendido en otros lenguajes pero en kotlin tienen sus variables con funciones bastante útiles. 
