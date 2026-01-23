@@ -1,0 +1,55 @@
+//Functions practice﻿
+//Ejercicio 1
+import kotlin.math.PI
+
+fun circleArea(r: Int):Double
+{
+    return PI*r*r
+}
+
+fun main() {
+    println(circleArea(2))
+}
+
+//Ejercicio 2
+import kotlin.math.PI
+
+fun circleArea(r: Int) = PI*r*r
+
+fun main() {
+    println(circleArea(2))
+}
+
+//Ejercicio 3 
+fun intervalInSeconds(hours: Int = 0 , minutes: Int = 0, seconds: Int = 0) =
+    ((hours * 60) + minutes) * 60 + seconds
+
+fun main() {
+    println(intervalInSeconds(1, 20, 15))
+    println(intervalInSeconds(minutes=1, seconds=25))
+    println(intervalInSeconds(hours=2))
+    println(intervalInSeconds(minutes=10))
+    println(intervalInSeconds(hours=1, seconds=1))
+}
+
+//Lambda expressions practice﻿
+//Ejercicio 1
+fun main() {
+    val actions = listOf("title", "year", "author")
+    val prefix = "https://example.com/book-info"
+    val id = 5
+    val urls = actions.map({action -> "$prefix/$id/$action"})
+    println(urls)
+}
+
+//Ejercicio 2
+fun repeatN(n: Int, action: () -> Unit) {
+    for(i in 1..n)
+    	action()
+}
+
+fun main() {
+    repeatN(5){println("Hello")}
+}
+
+//Conclusión: Aprendí a usar funciones normales y lambda, se me complicaron un poco las funciones lambda ya que son algo muy nuevo para mi 
